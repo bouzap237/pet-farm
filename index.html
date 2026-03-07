@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Haven | Adopt Love</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo"><i class="fa-solid fa-paw"></i> Pet farm</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#pets">Pets</a></li>
+                <li><a href="#adoption">Adoption</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero section-padding">
+        <div class="container hero-content">
+            <div class="hero-text animate-on-scroll slide-up">
+                <h1>Adopt Love.<br>Find Your Best Friend.</h1>
+                <p>Thousands of rescue pets are waiting to meet you. Open your heart and your home to a furry companion today.</p>
+                <a href="#pets" class="btn btn-primary">Browse Pets</a>
+            </div>
+            <div class="hero-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=600&q=80" alt="Happy Dog" class="hero-img">
+                <i class="fa-solid fa-bone floating-icon icon-1"></i>
+                <i class="fa-solid fa-cat floating-icon icon-2"></i>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats section-padding">
+        <div class="container stats-container">
+            <div class="stat-box">
+                <i class="fa-solid fa-house-chimney"></i>
+                <h3 class="counter" data-target="1520">0</h3>
+                <p>Pets Adopted</p>
+            </div>
+            <div class="stat-box">
+                <i class="fa-solid fa-building-shield"></i>
+                <h3 class="counter" data-target="45">0</h3>
+                <p>Shelters Supported</p>
+            </div>
+            <div class="stat-box">
+                <i class="fa-solid fa-users"></i>
+                <h3 class="counter" data-target="320">0</h3>
+                <p>Volunteers</p>
+            </div>
+            <div class="stat-box">
+                <i class="fa-solid fa-face-smile"></i>
+                <h3 class="counter" data-target="1450">0</h3>
+                <p>Happy Families</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pets" class="featured-pets section-padding">
+        <div class="container">
+            <div class="section-title animate-on-scroll slide-up">
+                <h2>Meet Our Pets</h2>
+                <p>Find your perfect match by browsing our adorable rescues.</p>
+            </div>
+           
+            <div class="filter-buttons animate-on-scroll slide-up">
+                <button class="filter-btn active" data-filter="all">All Pets</button>
+                <button class="filter-btn" data-filter="dog">Dogs</button>
+                <button class="filter-btn" data-filter="cat">Cats</button>
+                <button class="filter-btn" data-filter="small">Small Animals</button>
+            </div>
+
+            <div class="pets-grid" id="pets-grid">
+                </div>
+        </div>
+    </section>
+
+    <section class="gallery section-padding">
+        <div class="container">
+            <div class="section-title animate-on-scroll slide-up">
+                <h2>Happy Tails Gallery</h2>
+            </div>
+            <div class="carousel-container animate-on-scroll slide-up">
+                <button class="carousel-btn prev" id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="carousel-track-wrapper">
+                    <ul class="carousel-track" id="carousel-track">
+                        </ul>
+                </div>
+                <button class="carousel-btn next" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="adoption" class="process section-padding">
+        <div class="container">
+            <div class="section-title animate-on-scroll slide-up">
+                <h2>How It Works</h2>
+                <p>Adopting a pet is simple and rewarding.</p>
+            </div>
+            <div class="process-steps">
+                <div class="step animate-on-scroll slide-up">
+                    <div class="icon-circle"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <h3>1. Choose a Pet</h3>
+                    <p>Browse our gallery and find a pet that matches your lifestyle.</p>
+                </div>
+                <div class="step animate-on-scroll slide-up" style="transition-delay: 0.1s;">
+                    <div class="icon-circle"><i class="fa-solid fa-file-signature"></i></div>
+                    <h3>2. Submit Application</h3>
+                    <p>Fill out our quick online adoption form below.</p>
+                </div>
+                <div class="step animate-on-scroll slide-up" style="transition-delay: 0.2s;">
+                    <div class="icon-circle"><i class="fa-solid fa-handshake"></i></div>
+                    <h3>3. Meet the Pet</h3>
+                    <p>Schedule a visit to meet your new friend in person.</p>
+                </div>
+                <div class="step animate-on-scroll slide-up" style="transition-delay: 0.3s;">
+                    <div class="icon-circle"><i class="fa-solid fa-heart"></i></div>
+                    <h3>4. Take Home</h3>
+                    <p>Finalize the paperwork and bring your best friend home!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="form-about-section section-padding">
+        <div class="container form-about-grid">
+           
+            <div id="about" class="about-content animate-on-scroll slide-up">
+                <h2>About Pet Haven</h2>
+                <p>Since 2010, Pet Haven has been dedicated to rescuing abandoned and neglected animals. Our mission is to provide a safe haven for these precious souls and match them with loving, forever homes.</p>
+                <p>We believe every pet deserves a second chance at happiness.</p>
+                <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=600&q=80" alt="Dogs playing" class="about-img">
+            </div>
+
+            <div class="adoption-form-container animate-on-scroll slide-up">
+                <h2>Start the Adoption Process</h2>
+                <form id="adoption-form" class="adoption-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" required placeholder="(123) 456-7890">
+                    </div>
+                    <div class="form-group">
+                        <label for="pet-select">Select Pet (if known)</label>
+                        <select id="pet-select">
+                            <option value="">-- I'm open to suggestions --</option>
+                            </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="4" placeholder="Tell us a bit about your home and lifestyle..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary form-submit-btn">Submit Application</button>
+                    <div class="success-message" id="success-message">
+                        <i class="fa-solid fa-circle-check"></i> Application sent successfully! We'll be in touch soon.
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contact" class="footer">
+        <div class="container footer-content">
+            <div class="footer-section brand">
+                <h3><i class="fa-solid fa-paw"></i> Pet Haven</h3>
+                <p>Connecting loving families with rescue pets across the country.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#pets">Available Pets</a></li>
+                    <li><a href="#adoption">How to Adopt</a></li>
+                    <li><a href="#about">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-info">
+                <h3>Contact Us</h3>
+                <p><i class="fa-solid fa-location-dot"></i> 123 Rescue Road, Pet City, PC 12345</p>
+                <p><i class="fa-solid fa-phone"></i> (555) 123-4567</p>
+                <p><i class="fa-solid fa-envelope"></i> hello@pethaven.org</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Pet Haven. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="pet.js"></script>
+</body>
+</html>
