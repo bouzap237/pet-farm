@@ -1,11 +1,18 @@
 
 const pets = [
-    { id: 1, name: 'Bella', type: 'dog', breed: 'Labrador Retriever', age: '2 yrs', img: 'https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=500&q=80', desc: 'Friendly and energetic. Loves to play fetch.' },
-    { id: 2, name: 'Luna', type: 'cat', breed: 'Domestic Shorthair', age: '1 yr', img: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=500&q=80', desc: 'Sweet, cuddly, and loves a good sunny window.' },
-    { id: 3, name: 'Max', type: 'dog', breed: 'German Shepherd Mix', age: '4 yrs', img: 'https://images.unsplash.com/photo-1589965716319-4a041b58fa8a?auto=format&fit=crop&w=500&q=80', desc: 'Loyal and protective. Great with older kids.' },
-    { id: 4, name: 'Thumper', type: 'small', breed: 'Holland Lop Rabbit', age: '6 mos', img: 'https://images.unsplash.com/photo-1585110396000-c9faf4e48181?auto=format&fit=crop&w=500&q=80', desc: 'Curious and loves fresh veggies.' },
-    { id: 5, name: 'Charlie', type: 'dog', breed: 'Golden Retriever', age: '3 yrs', img: 'https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&fit=crop&w=500&q=80', desc: 'A total goofball. Will steal your heart.' },
-    { id: 6, name: 'Oliver', type: 'cat', breed: 'Maine Coon Mix', age: '5 yrs', img: 'https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=500&q=80', desc: 'Gentle giant who purrs loudly.' }
+    { id: 1, name: 'luna', type: 'bangal cats', breed: 'Labrador Retriever', age: '2 yrs', img: 'img/luna.jpg', desc: 'Friendly and energetic. Loves to play fetch.',price:'$350' },
+    { id: 2, name: 'bella', type: 'maincoon cats', breed: 'Domestic Shorthair', age: '1 yr', img: 'img/bella.jpg', desc: 'Sweet, cuddly, and loves a good sunny window.',price:'$500' },
+    { id: 3, name: 'daniel', type: 'bangal cats', breed: 'German Shepherd Mix', age: '4 yrs', img: 'img/daniel.jpg', desc: 'Loyal and protective. Great with older kids.',price:'$400' },
+    { id: 4, name: 'stella', type: 'maincoon cat', breed: 'Holland Lop Rabbit', age: '6 mos', img: 'img/stella.jpg', desc: 'Curious and loves fresh veggies.',price:'$600' },
+    { id: 5, name: 'gips', type: 'bangal cat', breed: 'Golden Retriever', age: '3 yrs', img: 'img/milla (1).jpeg', desc: 'A total goofball. Will steal your heart.',price:'$450' },
+    { id: 6, name: 'nina', type: 'maincoon cats', breed: 'Maine Coon Mix', age: '5 yrs', img: 'img/gips.jpeg', desc: 'Gentle giant who purrs loudly.',price:'$350'},
+
+     { id: 7, name: 'storm', type: 'bangal cats', breed: 'German Shepherd Mix', age: '4 yrs', img: 'img/gag3.jpeg', desc: 'Loyal and protective. Great with older kids.',price:'$400' },
+    { id: 8, name: 'Tcyrus', type: 'maincoon cat', breed: 'Holland Lop Rabbit', age: '6 mos', img: 'img/gag1.jpeg', desc: 'Curious and loves fresh veggies.',price:'$600' },
+    { id: 9, name: 'boris', type: 'bangal cat', breed: 'Golden Retriever', age: '3 yrs', img: 'img/boris.jpeg', desc: 'A total goofball. Will steal your heart.',price:'$450' },
+    { id: 10, name: 'boomber', type: 'maincoon cats', breed: 'Maine Coon Mix', age: '5 yrs', img: 'img/boomber.jpeg', desc: 'Gentle giant who purrs loudly.',price:'$350'},
+     { id: 11, name: 'boris', type: 'bangal cat', breed: 'Golden Retriever', age: '3 yrs', img: 'img/boris.jpeg', desc: 'A total goofball. Will steal your heart.',price:'$450' },
+    { id: 12, name: 'boomber', type: 'maincoon cats', breed: 'Maine Coon Mix', age: '5 yrs', img: 'img/acidfern-7NcdSLcRTq8-unsplash - Copy.jpg', desc: 'Gentle giant who purrs loudly.',price:'$550'}
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -40,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <span><i class="fa-solid fa-clock"></i> ${pet.age}</span>
                     </div>
                     <p>${pet.desc}</p>
+                    <p>${pet.price}</p>
                     <a href="#adoption" class="btn btn-primary" onclick="selectPetInForm('${pet.name}')">Adopt Me</a>
                 </div>
             `;
