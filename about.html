@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About PetFarm</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+
+body{background:#ffffff;color:#0d0d0d;transition:0.3s;}
+
+.dark{background:#121212;color:#eee;}
+.dark .card,.dark .testimonial-card{background:#1e1e1e;}
+
+/* --- Navigation --- */
+.navbar {
+    position: fixed; top: 0; left: 0; width: 100%;
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    z-index: 1000; padding: 15px 0;
+}
+.nav-container { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.8rem; font-weight: 700; color: var(--primary); display: flex; align-items: center; gap: 10px; }
+.nav-links { display: flex; gap: 30px; }
+.nav-links li a {
+    font-weight: 500; position: relative; color: rgb(237, 201, 69); transition: var(--transition) ;text-decoration:none;
+}
+.nav-links li a::after {
+    content: ''; position: absolute; left: 0; bottom: -5px; width: 0;
+    height: 2px; background: var(--text-dark); transition: var(--transition);
+}
+.nav-links li a:hover { color: var(--secondary) ; }
+.nav-links li a:hover::after { width: 100%; }
+.hamburger { display: none; font-size: 1.5rem; cursor: pointer; }
+
+
+/* HERO */
+.hero{
+  background:linear-gradient(rgba(229, 234, 235, 0.581),rgba(0,0,0,0.5)),url('img/milla\ \(2\).jpeg') center/cover no-repeat;
+  color:#370403;
+  text-align:center;
+  padding:100px 20px;
+}
+.hero h1{font-size:3rem;}
+.hero p{margin-top:10px;font-size:1.2rem;}
+
+/* SECTION */
+.section{padding:60px 20px;max-width:1100px;margin:auto;}
+.section h2{text-align:center;margin-bottom:20px;font-size:2rem;}
+.section p{text-align:center;max-width:800px;margin:auto;line-height:1.7;}
+
+/* GRID */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;margin-top:40px;}
+
+/* CARD */
+.card{
+  background:#fff;
+  padding:25px;
+  border-radius:15px;
+  text-align:center;
+  transition:0.3s;
+  box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+.card:hover{transform:translateY(-10px);}
+.card img{width:70px;margin-bottom:10px;}
+
+/* DELIVERY */
+.delivery{
+  background:linear-gradient(135deg,#ff7a18,#ffb347);
+  color:#fff;
+  padding:40px;
+  border-radius:20px;
+  text-align:center;
+}
+
+/* TESTIMONIAL SLIDER */
+.slider{display:flex;align-items:center;justify-content:center;gap:15px;margin-top:30px;}
+.slides{width:320px;}
+.testimonial-card{
+  display:none;
+  background:#fff;
+  padding:25px;
+  border-radius:15px;
+  text-align:center;
+  box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+.testimonial-card.active{display:block;}
+.testimonial-card img{
+  width:70px;height:70px;border-radius:50%;object-fit:cover;
+}
+.slider button{
+  border:none;background:#ff7a18;color:#fff;
+  padding:10px;border-radius:50%;cursor:pointer;
+}
+
+/* ANIMATION */
+.animate{opacity:0;transform:translateY(40px);transition:0.6s;}
+.animate.show{opacity:1;transform:translateY(0);}
+
+/* DARK BUTTON */
+
+
+/* RESPONSIVE */
+@media(max-width:600px){
+.hero h1{font-size:2rem;}
+}
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+/* --- Footer --- */
+.footer { background: #222; color: #e19511; padding-top: 60px; }
+.footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
+.footer-section h3 { color: var(--secondary); margin-bottom: 20px; }
+.brand p { margin-bottom: 20px; color: #bbb; }
+.social-icons a {
+    display: inline-flex; justify-content: center; align-items: center;
+    width: 40px; height: 40px; border-radius: 50%; background: #333; color: #fff;
+    margin-right: 10px; transition: var(--transition);
+}
+.social-icons a:hover { background: var(--secondary); transform: translateY(-3px);text-decoration: none; }
+.links ul li { margin-bottom: 10px; }
+.links ul li a { color: #ce8818; transition: var(--transition);text-decoration: none;  }
+.links ul li a:hover { color: var(--secondary); padding-left: 5px; }
+.contact-info p { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; color: #bbb; }
+.footer-bottom { background: #111; text-align: center; padding: 20px 0; color: #888; }
+
+/* --- Animations & Utilities --- */
+.animate-on-scroll { opacity: 0; transition: all 0.8s ease-out; }
+.slide-up { transform: translateY(50px); }
+.animate-on-scroll.show { opacity: 1; transform: translateY(0); }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+    .hero-content, .form-about-grid { grid-template-columns: 1fr; }
+    .hero-text { text-align: center; }
+    .nav-links {
+        display: none; position: absolute; top: 100%; left: 0; width: 100%;
+        background: var(--white); flex-direction: column; text-align: center;
+        padding: 20px 0; box-shadow: var(--shadow-soft); gap: 20px;
+    }
+    .nav-links.active { display: flex; }
+    .hamburger { display: block; }
+}
+
+
+.whatsapp-float i {
+  margin-top: 15px;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  background-color: #1ebe5d;
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-paw"></i> Pet farm</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Pets</a></li>
+                <li><a href="training (2).html">training</a></li>
+           
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+
+
+
+<!-- HERO -->
+<section class="hero animate">
+<h1>About PetFarm</h1>
+<p>Rescuing Pets • Building Families • Delivering Love Worldwide</p>
+</section>
+<!-- NARRATIVE -->
+<section class="section animate">
+<h2>Who We Are</h2>
+<p>
+PetFarm is more than just a pet adoption platform — we are a global network of
+animal lovers committed to giving pets a second chance at life. With agencies
+across France, the United States, Germany, and Belgium, we have built a trusted
+international presence dedicated to rescuing, caring for, and rehoming pets.
+</p>
+
+<p>
+Through strong partnerships with ethical breeders and rescue centers, PetFarm
+ensures that every animal receives proper care, medical attention, and love
+before finding a new home. Our mission is simple: connect happy pets with loving
+families, no matter where they are in the world.
+</p>
+</section>
+
+<!-- SERVICES -->
+<section class="section animate">
+<h2>What We Do</h2>
+
+<div class="grid">
+<div class="card">
+<img src="img/gag1.jpeg">
+<h3>Pet Rescue</h3>
+<p>We rescue abandoned and vulnerable animals and give them new hope.</p>
+</div>
+
+<div class="card">
+<img src="img/gag2.jpeg">
+<h3>Trusted Breeders</h3>
+<p>We partner with responsible breeders who prioritize animal welfare.</p>
+</div>
+
+<div class="card">
+<img src="img/gag3.jpeg">
+<h3>Global Network</h3>
+<p>Agencies across Europe and the USA ensure smooth adoption worldwide.</p>
+</div>
+</div>
+</section>
+
+<!-- DELIVERY -->
+<section class="section animate">
+<div class="delivery">
+<h2>Safe & Reliable Delivery</h2>
+<p>
+At PetFarm, we understand that bringing a new pet home is a special moment.
+That’s why we provide secure and stress-free delivery services. Whether you are
+in Europe or abroad, our trained team ensures that every pet travels safely,
+comfortably, and arrives happy and healthy at your doorstep.
+</p>
+</div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section animate">
+<h2>What Our Customers Say</h2>
+
+<div class="slider">
+<button id="prev">❮</button>
+
+<div class="slides">
+
+<div class="testimonial-card active">
+<img src="img/user1.jpg">
+<p>"PetFarm connected me with my dream puppy. Everything was professional and smooth!"</p>
+<h4>Sarah M.</h4>
+</div>
+
+<div class="testimonial-card">
+<img src="img/user2.jpg">
+<p>"I love how they truly care about animals. Their rescue mission is inspiring."</p>
+<h4>James K.</h4>
+</div>
+
+<div class="testimonial-card">
+<img src="img/user3.jpg">
+<p>"Delivery was fast and safe. My cat arrived calm and happy!"</p>
+<h4>Linda T.</h4>
+</div>
+
+</div>
+
+<button id="next">❯</button>
+</div>
+</section>
+
+    <footer id="contact" class="footer">
+        <div class="container footer-content">
+            <div class="footer-section brand">
+                <h3><i class="fa-solid fa-paw"></i> Pet Haven</h3>
+                <p>Connecting loving families with rescue pets across the country.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#pets">Available Pets</a></li>
+                    <li><a href="#adoption">How to Adopt</a></li>
+                    <li><a href="#about">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-info">
+                <h3>Contact Us</h3>
+                <p><i class="fa-solid fa-location-dot"></i> 123 Rescue Road, Pet City, PC 12345</p>
+                   <!-- WhatsApp Icon -->
+                    <p>
+<a href="https://wa.link/t9gzk5" target="_blank">
+  <i class="fab fa-whatsapp">+1 (229) 429-3042</i>
+</a>
+</p>
+              <p>  <a href="mailto:pethaven586@gmail.com"> pethaven586@gmail.com</a></i></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Pet Haven. All rights reserved.</p>
+        </div>
+    </footer>
+
+</section>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.link/t9gzk5" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+
+<script>
+
+
+// SLIDER
+const slides=document.querySelectorAll('.testimonial-card');
+let index=0;
+
+function showSlide(i){
+slides.forEach(s=>s.classList.remove('active'));
+slides[i].classList.add('active');
+}
+
+document.getElementById('next').onclick=()=>{
+index=(index+1)%slides.length;
+showSlide(index);
+};
+
+document.getElementById('prev').onclick=()=>{
+index=(index-1+slides.length)%slides.length;
+showSlide(index);
+};
+
+setInterval(()=>{
+index=(index+1)%slides.length;
+showSlide(index);
+},4000);
+
+// SCROLL ANIMATION
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+});
+});
+
+document.querySelectorAll('.animate').forEach(el=>observer.observe(el));
+</script>
+
+
+  </body>
+</body>
+</html>
