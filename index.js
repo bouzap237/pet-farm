@@ -3,8 +3,8 @@ const pets = [
     { id: 1, name: 'luna', type: 'bangal cats', breed: 'Labrador Retriever', age: '2 yrs', img: 'img/luna.jpg', desc: 'Friendly and energetic. Loves to play fetch.',price:'$350' },
     { id: 2, name: 'bella', type: 'maincoon cats', breed: 'Domestic Shorthair', age: '1 yr', img: 'img/bella.jpg', desc: 'Sweet, cuddly, and loves a good sunny window.',price:'$500' },
     { id: 3, name: 'daniel', type: 'bangal cats', breed: 'German Shepherd Mix', age: '4 yrs', img: 'img/daniel.jpg', desc: 'Loyal and protective. Great with older kids.',price:'$400' },
-    { id: 4, name: 'stella', type: 'maincoon cat', breed: 'Holland Lop Rabbit', age: '6 mos', img: 'img/stella.jpg', desc: 'Curious and loves fresh veggies.',price:'$600' },
-    { id: 5, name: 'gips', type: 'bangal cat', breed: 'Golden Retriever', age: '3 yrs', img: 'img/milla (1).jpeg', desc: 'A total goofball. Will steal your heart.',price:'$450' },
+    { id: 4, name: 'stella', type: 'maincoon cat', breed: 'Holland Lop Rabbit', age: '6 mos', img: 'stella.jpg', desc: 'Curious and loves fresh veggies.',price:'$600' },
+    { id: 5, name: 'gips', type: 'bangal cat', breed: 'Golden Retriever', age: '3 yrs', img: 'milla (1).jpeg', desc: 'A total goofball. Will steal your heart.',price:'$450' },
     { id: 6, name: 'nina', type: 'maincoon cats', breed: 'Maine Coon Mix', age: '5 yrs', img: 'img/gips.jpeg', desc: 'Gentle giant who purrs loudly.',price:'$350'},
 
      { id: 7, name: 'storm', type: 'bangal cats', breed: 'German Shepherd Mix', age: '4 yrs', img: 'img/gag3.jpeg', desc: 'Loyal and protective. Great with older kids.',price:'$400' },
